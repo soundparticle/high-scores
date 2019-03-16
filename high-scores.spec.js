@@ -21,7 +21,7 @@ describe('High Scores Test Suite', () => {
     expect(new HighScores(input).top).toEqual([50, 30, 10]);
   });
 
-  xtest('Personal bests highest to lowest', () => {
+  test('Personal bests highest to lowest', () => {
     const input = [20, 10, 30];
     expect(new HighScores(input).top).toEqual([30, 20, 10]);
   });

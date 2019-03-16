@@ -1,21 +1,22 @@
 /* eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }] */
 class HighScores {
   constructor(input) {
-    this.scores = input;
+    let highestInput = 0;
+    const scoresInput = [];
+
+    this.scores = scoresInput;
     this.input = input;
     this.latest = input[input.length - 1];
 
-    let highestInput = 0;
     for (let i = 0; i < input.length; i++) {
       highestInput = input[i] > highestInput ? highestInput = input[i]
         : highestInput;
+      scoresInput.push(input[i]);
     }
 
-    const bests = input;
-    console.log('****** this.highest *****', input);
+    console.log('****** console *****', scoresInput);
     this.highest = highestInput;
-    this.top = bests;
-    // top = this.input.sort((a, b) => b - a);
+    this.top = input.sort((a, b) => b - a);
   }
 }
 
