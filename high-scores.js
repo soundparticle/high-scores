@@ -15,7 +15,7 @@ class HighScores {
     }
     this.highest = highestInput;
 
-    const top = input.sort((a, b) => b - a);
+    const top = input.sort((a, b) => b - a).slice(0, 3);
     this.top = top;
     console.log('****** console *****', this.top);
   }
