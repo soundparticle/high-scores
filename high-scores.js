@@ -17,20 +17,16 @@ class HighScores {
       lastInput = personalBest[personalBest.length - 1];
       highestDiff = highestInput - lastInput;
     }
-    this.highest = highestInput;
 
+    this.highest = highestInput;
     const top = input.sort((a, b) => b - a).slice(0, 3);
     this.top = top;
 
     const bestMessage = `Your latest score was ${highestInput}. That's your personal best!`;
     const diffMessage = `Your latest score was ${lastInput}. That's ${highestDiff} short of your personal best!`;
+
     this.report = lastInput === highestInput ? bestMessage
       : diffMessage;
-
-    console.log('****** personalBest *****', personalBest);
-    console.log('****** highestInput *****', highestInput);
-    console.log('****** highestDiff *****', highestDiff);
-    console.log('****** diff MSG *****', diffMessage);
   }
 }
 
