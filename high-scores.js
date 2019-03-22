@@ -17,7 +17,11 @@ class HighScores {
 
     const top = input.sort((a, b) => b - a).slice(0, 3);
     this.top = top;
-    console.log('****** console *****', this.top);
+
+    const bestMessage = `Your latest score was ${highestInput}. That's your personal best!`;
+    this.report = bestMessage;
+
+    console.log('****** console *****', bestMessage);
   }
 }
 
